@@ -1,0 +1,6 @@
+version: "3"
+services:
+  mongo:
+    build: .
+    volumes:
+      - C:/Users/Daniel/home/emacs/roam:/app/data
