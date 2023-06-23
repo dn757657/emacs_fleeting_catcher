@@ -20,6 +20,7 @@ import os
 from emacs_insert import write_to_inbox
 
 from telegram import __version__ as TG_VER
+from dotenv import load_dotenv
 
 try:
     from telegram import __version_info__
@@ -74,7 +75,10 @@ async def recieve_message(update: Update, context: ContextTypes.DEFAULT_TYPE) ->
 def main() -> None:
     """Start the bot."""
 
-    # get bot token from env
+    # load bot token from env if exists
+    if os.path.exists("./.env"):
+        env = load_dotenv()
+
     tele_token = os.getenv('TELEBOT_TOKEN')
 
     # Create the Application and pass it your bot's token.

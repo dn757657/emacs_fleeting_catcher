@@ -1,6 +1,6 @@
 version: "3"
 services:
-  mongo:
+  emacs_fleeting_catcher:
     build: .
     volumes:
       - C:/Users/Daniel/home/emacs/roam:/app/data
