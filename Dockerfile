@@ -11,6 +11,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Copy the bot script and requirements.txt to the container
 COPY emacs_insert.py .
 COPY telegram_fetcher.py .
+COPY .env .
 
 # Set the command to run your bot script
 CMD [ "python", "telegram_fetcher.py" ]
